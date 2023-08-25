@@ -1,0 +1,4 @@
+<view class="tips">
+    <view>需要授权自动弹窗，不需要则不显示弹窗</view>
+</view>
+<Privacy wx:if="{{showPrivacy}}" />
