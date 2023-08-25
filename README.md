@@ -1,3 +1,14 @@
+<!--
+ * @Author: Jiaqi s@94xy.com
+ * @Date: 2023-08-25 15:18:21
+ * @LastEditors: Jiaqi s@94xy.com
+ * @LastEditTime: 2023-08-25 16:43:27
+ * @FilePath: /minicode-privacy/README.md
+ * @Description:
+ *
+ * Copyright (c) 2023 by 鲜艺, All Rights Reserved.
+-->
+
 # 小程序隐私保护授权弹窗组件
 
 > 微信 2023 年 8 月 10 日发布 [关于小程序隐私保护指引设置的公告](https://developers.weixin.qq.com/community/develop/doc/00042e3ef54940ce8520e38db61801)，9 月 15 日起所有隐私接口需用户点击同意并同步给微信之后才可以使用。
@@ -65,4 +76,4 @@ onShow() {
 
 # 在线预览效果
 
-![](/img/qrcode.png)
+![](/img/qrcode.jpg)
