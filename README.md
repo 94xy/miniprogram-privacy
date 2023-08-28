@@ -1,19 +1,10 @@
-<!--
- * @Author: Jiaqi s@94xy.com
- * @Date: 2023-08-25 15:18:21
- * @LastEditors: Jiaqi s@94xy.com
- * @LastEditTime: 2023-08-25 16:43:27
- * @FilePath: /minicode-privacy/README.md
- * @Description:
- *
- * Copyright (c) 2023 by 鲜艺, All Rights Reserved.
--->
-
 # 小程序隐私保护授权弹窗组件
 
 > 微信 2023 年 8 月 10 日发布 [关于小程序隐私保护指引设置的公告](https://developers.weixin.qq.com/community/develop/doc/00042e3ef54940ce8520e38db61801)，9 月 15 日起所有隐私接口需用户点击同意并同步给微信之后才可以使用。
 
 当前组件做了隐私保护指引弹窗界面，直接引用，需要授权时展示弹窗，当用户点击“拒绝”直接退出小程序，点击“同意”同步结果给微信且以后不再弹窗，之后可以正常使用隐私接口。
+
+**8 月 28 更新：今天才发现小程序可以使用页面的生命周期，对其进行了简化，只需要使用引入组件即可，不再需要任何其它代码**
 
 # 注意事项
 
@@ -40,30 +31,11 @@
 
 3. 在 page.wxml 中使用组件
 
-```html
-<Privacy wx:if="{{showPrivacy}}" />
+```jsx
+<Privacy />
 ```
 
-4. 在 page.js 的 onShow 生命周期中查询隐私授权情况，需要授权显示弹窗，不需要授权不显示
-
-```js
-onShow() {
-  const _ = this;
-  // 查询隐私授权情况
-  wx.getPrivacySetting({
-      success(res) {
-        if (res.needAuthorization) {
-          // 需要授权
-          _.setData({
-              showPrivacy: true
-          })
-        }
-      }
-  })
-}
-```
-
-5. 可以在所有使用了隐私接口的页面都加上该组件，授权一次之后使用所有隐私接口不再需要授权
+4. 可以在所有使用了隐私接口的页面都加上该组件，授权一次之后使用所有隐私接口不再需要授权
 
 # 取消授权
 
