@@ -15,10 +15,10 @@ Component({
             const _ = this
             wx.getPrivacySetting({
                 success(res) {
-                    if (res.needAuthorization) {
+                    if (res.errMsg == "getPrivacySetting:ok") {
                         _.setData({
                             privacyContractName: res.privacyContractName,
-                            showPrivacy: true
+                            showPrivacy: res.needAuthorization
                         })
                     }
                 }
