@@ -5,5 +5,5 @@
         "compileHotReLoad": true,
         "skylineRenderEnable": true
     },
-    "libVersion": "3.0.1"
+    "libVersion": "2.33.0"
 }
