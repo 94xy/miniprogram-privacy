@@ -1,5 +1,5 @@
 <!--component/privacy/privacy.wxml-->
-<view class="privacy" wx:if="{{showPrivacy}}">
+<view class="privacy" wx:if="{{showPrivacy}}" catchtouchmove="handleCatchtouchMove">
     <view class="content">
         <view class="title">隐私保护指引</view>
         <view class="des">
