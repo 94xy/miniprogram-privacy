@@ -81,6 +81,10 @@ Component({
             }
 
             return 0
+        },
+        // 通过绑定空事件禁止滑动事件的穿透
+        handleCatchtouchMove() {
+            return
         }
     },
 })
